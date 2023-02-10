@@ -1,0 +1,4 @@
+AppName: "My App"
+port: 8080
+url: "http://localhost"
+cookie_secret: 123456789

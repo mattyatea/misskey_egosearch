@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <script src="https://kit.fontawesome.com/7fcb78162b.js" crossorigin="anonymous"></script>
+  <title>
+    <%- AppName%> - ログイン</title>
+</head>
+<body>
+  <div class="container-sm ">
+    <nav class="navbar navbar-light mt-2" style="background-color: #e3f2fd; border-radius: 20px;">
+      <h2 class="ms-3">
+        <%- AppName %>
+      </h2>
+    </nav>
+    <nav class="nav nav-pills flex-column flex-sm-row mt-3"> <a class="flex-sm-fill text-sm-center nav-link " href="../"><i class="fa-solid fa-house"></i></a> <a class="flex-sm-fill text-sm-center nav-link " href="../user"><i class="fa-solid fa-user"></i></a>
+     <a class="flex-sm-fill text-sm-center nav-link active" href="../login"><i class="fa-solid fa-right-to-bracket"></i></a>
+    </nav>
+    <form method="POST" action="/login">
+     <div class="alert alert-danger" role="alert">
+      URLが間違っているか、そのインスタンスは対応していない可能性があります。
+    </div>
+      <div class="form-group mt-3">
+          <input type="text" class="form-control" name="instance" id="instance" placeholder="インスタンスのurl(misskey.ioとか)">
+          <button type="submit"  id="btn"class="btn btn-primary">ログイン</button>
+          <br>サービスの改善のためにあなたのmisskeyの情報を収集することがあります。
+          <br>ご協力お願いします。
+          <br> MastodonやPleromaにも対応予定です。
+      </div>
+   </form>
+</body>
+</html>
